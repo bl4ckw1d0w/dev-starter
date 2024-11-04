@@ -1,5 +1,5 @@
 
-package configs
+package config
 
 // CommandInfo armazena o comando e a mensagem associada.
 type CommandInfo struct {
