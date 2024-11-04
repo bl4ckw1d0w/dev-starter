@@ -5,3 +5,15 @@ Este projeto contém um conjunto básico de instruções e scripts para configur
 ## Requisitos
 
 - Windows 10 ou superior
+```bash
+/dev-starter/
+│
+├── /configs/
+│   └── commands.go       // Comandos e funções reutilizáveis para os perfis
+│
+├── /profiles/
+│   ├── devops.go         // Perfil DevOps
+│   └── web.go            // Perfil Web
+│
+└── main.go               // Ponto de entrada do seu projeto
+```

@@ -3,7 +3,7 @@ package profiles
 import (
     "fmt"
     "os/exec"
-    "github.com/bl4ckw1d0w/dev-starter/config"
+    "github.com/bl4ckw1d0w/dev-starter/config" // Ajuste o caminho de acordo com sua estrutura
 )
 
 // InstallDevOpsProfile instala as ferramentas necessárias para o perfil DevOps.
