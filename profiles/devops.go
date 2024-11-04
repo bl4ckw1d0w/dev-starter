@@ -9,7 +9,7 @@ import (
 // InstallDevOpsProfile instala as ferramentas necessárias para o perfil DevOps.
 func InstallDevOpsProfile() {
     // Obtém os comandos e mensagens para o perfil DevOps
-    commands := configs.GetDevOpsCommands()
+    commands := config.GetDevOpsCommands()
 
     // Executando cada comando
     for _, cmd := range commands {

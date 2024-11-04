@@ -19,7 +19,7 @@ func InstallWebProfile() {
     // Pergunta se o usuário deseja instalar Node.js e NPM
     if promptUser("Você gostaria de instalar Node.js e NPM?") {
         // Obtém os comandos básicos de instalação para o perfil Web
-        commands := configs.GetWebCommands()
+        commands := config.GetWebCommands()
         
         // Executa cada comando para instalar Node.js e NPM
         for _, cmd := range commands {
