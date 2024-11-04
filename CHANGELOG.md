@@ -18,6 +18,7 @@ Releases to productive environments should run from a tagged version.
 ### Added
 
 - added detection of wsl instalation[#1](https://github.com/bl4ckw1d0w/dev-starter/issues/1)
+- added DevOps profile [#3](https://github.com/bl4ckw1d0w/dev-starter/issues/3)
 
 ### Changed
 
