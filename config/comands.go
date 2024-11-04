@@ -22,3 +22,10 @@ func GetDevOpsCommands() []CommandInfo {
         {"sudo apt install -y terraform", "⚡ Instalando o Terraform! Preparando o terreno para a infraestrutura mágica!"},
     }
 }
+func GetWebCommands() []CommandInfo {
+    return []CommandInfo{
+        {"sudo apt update", "🔄 Atualizando pacotes do sistema..."},
+        {"sudo apt install -y nodejs", "🟢 Instalando Node.js, o motor do JavaScript!"},
+        {"sudo apt install -y npm", "📦 Instalando NPM, o gerenciador de pacotes do Node!"},
+    }
+}
