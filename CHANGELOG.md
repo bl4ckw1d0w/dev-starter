@@ -24,7 +24,7 @@ Releases to productive environments should run from a tagged version.
 - added pkg to wsl config [#12](https://github.com/bl4ckw1d0w/dev-starter/issues/12)
 - added sudo configurantion [#13](https://github.com/bl4ckw1d0w/dev-starter/issues/13)
 - added nix configurantion [#16](https://github.com/bl4ckw1d0w/dev-starter/issues/16)
-
+- added a simple CLI to setup [#18](https://github.com/bl4ckw1d0w/dev-starter/issues/18)
 
 ### Changed
 

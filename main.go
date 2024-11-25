@@ -1,20 +1,26 @@
 package main
 
 import (
-	// "bufio"
-	// "os"
-	// "os/exec"
-	// "strings"
+	"log"
+	"os"
+	"github.com/bl4ckw1d0w/dev-starter/cmd"
 
-	"github.com/bl4ckw1d0w/dev-starter/config"
-	"github.com/sirupsen/logrus"
+	"github.com/spf13/cobra"
 )
 
 func main() {
-	logrus.SetLevel(logrus.DebugLevel)
-	logrus.Info("inicializando")
-	config.SetupWSL() // Inicializa o WSL para Windows (ou outros SOs no futuro)
-	logrus.Info("Instalando o nix")	
-	config.SetupNix()
+	rootCmd := &cobra.Command{
+		Use:   "wsl-tool",
+		Short: "WSL Tool - Ferramenta para automatizar configurações do WSL",
+		Long:  "WSL Tool permite configurar e gerenciar ambientes no WSL com perfis personalizados, backups e restauração.",
+	}
 
+	// Subcomandos
+	rootCmd.AddCommand(cmd.SetupCmd)
+
+	// Executa a CLI
+	if err := rootCmd.Execute(); err != nil {
+		log.Fatalf("Erro ao executar: %v", err)
+		os.Exit(1)
+	}
 }

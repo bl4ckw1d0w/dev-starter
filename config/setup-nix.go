@@ -50,7 +50,7 @@ func executeCommand(cmdStr string) error {
 	// Conecta a entrada, saída e erro do terminal
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	cmd.Stdin = os.Stdin // Permite a interação com o terminal para senha do sudo
+	cmd.Stdin = os.Stdin 
 
 	// Executa o comando e retorna o erro se houver
 	return cmd.Run()
