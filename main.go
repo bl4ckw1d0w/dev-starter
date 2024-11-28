@@ -10,13 +10,13 @@ import (
 
 func main() {
 	rootCmd := &cobra.Command{
-		Use:   "wsl-tool",
-		Short: "WSL Tool - Ferramenta para automatizar configurações do WSL",
-		Long:  "WSL Tool permite configurar e gerenciar ambientes no WSL com perfis personalizados, backups e restauração.",
+		Use:   "dev-starter",
+		Short: "Dev Starter - Ferramenta para automatizar configurações de ambiente",
+		Long:  "Dev Starter permite configurar e gerenciar ambientes no WSL com perfis personalizados, backups e restauração.",
 	}
 
 	// Subcomandos
-	rootCmd.AddCommand(cmd.SetupCmd)
+	rootCmd.AddCommand(cmd.SetupCmd, cmd.ProfileCmd)
 
 	// Executa a CLI
 	if err := rootCmd.Execute(); err != nil {

@@ -2,7 +2,10 @@ module github.com/bl4ckw1d0w/dev-starter
 
 go 1.23.2
 
-require github.com/sirupsen/logrus v1.9.3
+require (
+	github.com/sirupsen/logrus v1.9.3
+	gopkg.in/yaml.v3 v3.0.1
+)
 
 require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
