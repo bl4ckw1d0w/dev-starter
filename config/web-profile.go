@@ -17,12 +17,14 @@ func ConfigureWebProfile() {
 	profile, err := LoadProfile(profilePath)
 	if err != nil {
 		fmt.Printf("Erro ao carregar perfil: %v\n", err)
-		return
 	}
 
 	// Definir as categorias e suas funções de configuração
 	profileConfig := map[string]func(*Profile){
 		"Editores e IDEs": chooseEditor,
+		"Frameworks de Front-End":        chooseFrontendFramework,
+
+		
 	}
 
 	// Iterar sobre o map e executar cada função de categoria
@@ -53,4 +55,25 @@ func chooseEditor(profile *Profile) {
 		}
 	}
 	logrus.Infof("Editor %s configurado com sucesso!", editor)
+}
+func chooseFrontendFramework(Profile *Profile)  {
+	var frontEnd string
+	fmt.Println("Escolha um framework de front-end (ex: react, vue, angular):")
+	fmt.Scanln(&frontEnd)
+
+	frontEndCommands, exists := Profile.Commands["front_end"][frontEnd]
+	if !exists {
+		logrus.Errorf("Framework %s não encontrado no perfil.", frontEnd)
+	}
+
+	// Executa os comandos do editor escolhido
+	logrus.Infof("Instalando editor: %s", frontEnd)
+	for _, cmd := range frontEndCommands {
+		err := utils.ExecuteCommand(cmd)
+		if err != nil {
+			logrus.Errorf("Erro ao executar comando '%s': %v", cmd, err)
+		}
+	}
+	logrus.Infof("Framework %s configurado com sucesso!", frontEnd)
+
 }
