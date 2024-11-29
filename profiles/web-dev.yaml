@@ -10,3 +10,18 @@ commands:
       - "sudo snap install intellij-idea-community --classic"
     sublime:
       - "sudo apt update && sudo apt install -y sublime-text"
+  
+  front_end:
+    react:
+      - "sudo apt update && sudo apt install -y nodejs npm"
+      - "sudo npm install -g create-react-app"
+    vuejs:
+      - "sudo apt update && sudo apt install -y nodejs npm"
+      - "sudo npm install -g @vue/cli"
+    angular:
+      - "sudo apt update && sudo apt install -y nodejs npm"
+      - "sudo npm install -g @angular/cli"
+    svelte:
+      - "sudo apt update && sudo apt install -y nodejs npm"
+      - "sudo npm install -g degit"
+      - "npx degit sveltejs/template my-svelte-app"
