@@ -27,6 +27,7 @@ Releases to productive environments should run from a tagged version.
 - added a simple CLI to setup [#18](https://github.com/bl4ckw1d0w/dev-starter/issues/18)
 - added a funcional IDEs instalation CLI [#20](https://github.com/bl4ckw1d0w/dev-starter/issues/20)
 - added a funcional frontEnd framework instalation CLI [#22](https://github.com/bl4ckw1d0w/dev-starter/issues/22)
+- added a unit test [#24](https://github.com/bl4ckw1d0w/dev-starter/issues/24)
 
 ### Changed
 
